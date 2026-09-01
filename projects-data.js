@@ -200,7 +200,7 @@ var PROJECTS_DATA = [
     affiliationName: "MICA",
     featured: true,
     badge: "FinTech Security",
-    image: "assets/projs-imgs/Bank-1.png",
+    image: "./assets/projs-imgs/Bank-1.png",
     photos: [
       "assets/projs-imgs/Bank-1.png",
       "assets/projs-imgs/Bank-2.png",
