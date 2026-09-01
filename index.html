@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/images/ico.png" sizes="any">
+  <title>Omar Ibrahim | Penetration Tester & Ethical Hacker</title>
+  <meta name="description"
+    content="Official Portfolio of Omar Ibrahim - Penetration Tester, Ethical Hacker, and IT Student specializing in Web App Pen Testing, Vulnerability Assessment, Embedded & IoT Security, and Low-Level Systems.">
+  <meta name="keywords"
+    content="Omar Ibrahim, Penetration Tester, Ethical Hacker, Cybersecurity, OWASP Top 10, Metasploit, OpenVAS, Burp Suite, Embedded Security, Reverse Engineering, Egypt">
+  <meta name="author" content="Omar Ibrahim">
+
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:title" content="Omar Ibrahim | Penetration Tester & Ethical Hacker">
+  <meta property="og:description"
+    content="Hands-on offensive security researcher, TryHackMe Top 8%, and Embedded Security Developer. Explore projects, security writeups, certifications, and interactive terminal.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://0xomar-ibrahim.github.io/">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="cyber-theme">
+  <!-- Canvas Background for Cyber Particles -->
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Cyber Lighting Overlays -->
+  <div class="cyber-glow-orb glow-top-left" aria-hidden="true"></div>
+  <div class="cyber-glow-orb glow-bottom-right" aria-hidden="true"></div>
+  <div class="scanline-overlay" id="scanlines" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="cyber-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" id="brand-logo" aria-label="Omar Ibrahim Home">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-prefix">0x</span><span class="brand-name">4FMR</span>
+        <span class="brand-cursor">_</span>
+        <span class="brand-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link" id="nav-about">About</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link" id="nav-edu">Education</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link" id="nav-exp">Experience</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+          <li class="nav-item"><a href="#ctfs" class="nav-link" id="nav-ctfs">CTFs</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+          <li class="nav-item"><a href="#leadership" class="nav-link" id="nav-leadership">Leadership</a></li>
+          <li class="nav-item"><a href="#certificates" class="nav-link" id="nav-certs">Certificates</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="nav-actions">
+
+        <!-- Terminal Launcher Quick Button -->
+        <button class="cyber-btn cyber-btn-sm cyber-btn-terminal" id="open-terminal-btn"
+          title="Launch Interactive Cyber Console">
+          <i data-lucide="terminal"></i>
+          <span>0xConsole</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+          <i data-lucide="menu" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Live Status Radar Pill -->
+          <div class="status-pill" id="hero-status-pill">
+            <span class="status-indicator">
+              <span class="radar-dot"></span>
+              <span class="radar-ping"></span>
+            </span>
+            <span class="status-text">AVAILABLE FOR OFFENSIVE SECURITY & PEN TEST ROLES</span>
+          </div>
+
+          <!-- Main Title & Typographic Hierarchy -->
+          <h1 class="hero-title">
+            <span class="hero-greeting">Hi, I'm</span>
+            <span class="hero-name glow-text">Omar Ibrahim</span>
+          </h1>
+
+          <!-- Dynamic Animated Typewriter Headline -->
+          <div class="hero-role-wrapper">
+            <span class="role-static">Specializing in:</span>
+            <span class="typewriter-text" id="typewriter">Penetration Tester & Ethical Hacker</span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <!-- Concise Elevator Pitch -->
+          <p class="hero-description">
+            Hands-on offensive security researcher with practical expertise in web application penetration testing,
+            vulnerability assessment, embedded hardware security, and low-level reverse engineering.
+          </p>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="cyber-btn cyber-btn-primary" id="hero-cta-projects">
+              <i data-lucide="folder-code"></i>
+              <span>Explore Projects</span>
+            </a>
+            <button class="cyber-btn cyber-btn-secondary" id="hero-cta-terminal">
+              <i data-lucide="terminal"></i>
+              <span>Launch 0xTerminal</span>
+            </button>
+            <a href="pdfs/Omar%20Ibrahim%20Fathy%20-%20Junior%20Pentester.pdf" target="_blank" rel="noopener noreferrer"
+              class="cyber-btn cyber-btn-glass" id="btn-download-resume"
+              title="View / Download Omar Ibrahim Resume PDF">
+              <i data-lucide="file-text"></i>
+              <span>View Resume (PDF)</span>
+            </a>
+          </div>
+
+          <!-- Social Links Strip -->
+          <div class="hero-social-links">
+            <a href="https://github.com/0xOmar-Ibrahim" target="_blank" rel="noopener noreferrer" class="social-link"
+              title="GitHub Profile">
+              <svg class="brand-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              <span>0xOmar-Ibrahim</span>
+            </a>
+            <a href="https://www.linkedin.com/in/0x4fmar" target="_blank" rel="noopener noreferrer" class="social-link"
+              title="LinkedIn Profile">
+              <svg class="brand-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+              <span>omar-ibrahem</span>
+            </a>
+            <span class="social-link location-badge" title="Location">
+              <i data-lucide="map-pin"></i>
+              <span>Giza, Egypt</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Hero Professional Photo Card (Cyber Framed & Animated) -->
+        <div class="hero-visual">
+          <div class="hero-photo-card">
+            <!-- Glowing Cyber Corner Brackets -->
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket top-right"></div>
+            <div class="corner-bracket bottom-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+
+            <!-- Top Status Pill -->
+            <div class="photo-status-badge">
+              <span class="status-dot"></span>
+              <span>ETHICAL HACKER &bull; PEN TESTER</span>
+            </div>
+
+            <!-- Main Image Wrapper with Cyber Scanning Effect -->
+            <div class="hero-photo-wrapper">
+              <img src="assets/images/profile.jpeg" alt="Omar Ibrahim - Penetration Tester & Ethical Hacker"
+                class="hero-profile-img">
+              <div class="photo-cyber-overlay"></div>
+              <div class="photo-scanner-beam"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section: Professional Summary & Focus Areas -->
+    <section class="section-block" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="user-check"></i> PROFILE DOSSIER</div>
+          <h2 class="section-title">Professional Summary</h2>
+          <p class="section-subtitle">A deep dive into my background, technical philosophy, and offensive security
+            mindset.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Main Narrative Bio Card -->
+          <div class="glass-card about-bio-card">
+            <div class="card-glow-edge"></div>
+            <div class="bio-header">
+              <div class="bio-avatar-badge">
+                <img src="assets/images/profile.jpeg" alt="Omar Ibrahim" class="bio-avatar-img">
+              </div>
+              <div>
+                <h3 class="bio-title">Omar Ibrahim</h3>
+                <span class="bio-location"><i data-lucide="map-pin"></i> Giza, Egypt &bull; Information
+                  Technology</span>
+              </div>
+            </div>
+
+            <div class="bio-content-text">
+              <p>
+                I am an aspiring Penetration Tester and IT student driven by a profound fascination with
+                offensive security, low-level binary behavior, and resilient architecture design. My practical journey
+                has been forged through hundreds of hours on <strong>TryHackMe</strong>, <strong>Hack The Box</strong>,
+                and the <strong>PortSwigger Web Security Academy</strong>.
+              </p>
+              <p>
+                My methodology spans the full ethical hacking lifecycle: rigorous reconnaissance, comprehensive web
+                enumeration, vulnerability validation, CVE exploit analysis with tools like Metasploit and OpenVAS, and
+                constructing actionable remediation strategies that harden modern systems against real-world
+                adversaries.
+              </p>
+              <p>
+                Complementing my offensive security foundation is extensive hands-on experience in <strong>Embedded
+                  Systems & IoT Security</strong> (at LABstar) and low-level development in <strong>C and x86-64
+                  Assembly</strong>, giving me a unique full-stack perspective from hardware registers and serial buses
+                up to modern web protocols.
+              </p>
+            </div>
+
+            <!-- Direct Contact Chips in Bio -->
+            <div class="bio-quick-contacts">
+              <button class="copy-pill" data-copy="omarforsec@gmail.com" title="Click to copy email">
+                <i data-lucide="mail"></i>
+                <span>omarforsec@gmail.com</span>
+                <i data-lucide="copy" class="copy-icon"></i>
+              </button>
+              <button class="copy-pill" data-copy="01061408612" title="Click to copy primary phone">
+                <i data-lucide="phone"></i>
+                <span>01061408612</span>
+                <i data-lucide="copy" class="copy-icon"></i>
+              </button>
+              <button class="copy-pill" data-copy="01144130977" title="Click to copy secondary phone">
+                <i data-lucide="phone-call"></i>
+                <span>01144130977</span>
+                <i data-lucide="copy" class="copy-icon"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- 4 Core Pillars Cards -->
+          <div class="about-pillars-grid">
+            <div class="pillar-card">
+              <div class="pillar-icon-box cyber-cyan-bg">
+                <i data-lucide="globe"></i>
+              </div>
+              <h4 class="pillar-heading">Web App Penetration Testing</h4>
+              <p class="pillar-text">OWASP Top 10 exploitation, authentication bypasses, IDORs, SSRF, injection vectors,
+                and manual Burp Suite intercept audits.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon-box cyber-green-bg">
+                <i data-lucide="network"></i>
+              </div>
+              <h4 class="pillar-heading">Network Recon & Vulnerability Audit</h4>
+              <p class="pillar-text">Active service mapping, OpenVAS NVTs, CVE exploit verification using Metasploit,
+                and network traffic packet analysis with Wireshark.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon-box cyber-purple-bg">
+                <i data-lucide="cpu"></i>
+              </div>
+              <h4 class="pillar-heading">Embedded & IoT Hardware Security</h4>
+              <p class="pillar-text">RFID access control validation, ESP32/ESP8266 Wi-Fi firmware hardening, PCB design,
+                and serial communication bus protection.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon-box cyber-amber-bg">
+                <i data-lucide="binary"></i>
+              </div>
+              <h4 class="pillar-heading">Low-Level & Reverse Engineering</h4>
+              <p class="pillar-text">x86-64 assembly, memory layout comprehension, binary file parsing in C, and Python
+                automation for security pipelines.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Education & Academic Honors -->
+    <section class="section-block" id="education">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="graduation-cap"></i> ACADEMIC PATHWAY</div>
+          <h2 class="section-title">Education & Honors</h2>
+          <p class="section-subtitle">Academic foundations in Information Technology, Embedded Systems, and Artificial
+            Intelligence.</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- Degree 1: University -->
+          <div class="glass-card edu-card">
+            <div class="edu-header">
+              <div class="edu-badge-icon cyber-cyan-bg">
+                <i data-lucide="landmark"></i>
+              </div>
+              <div class="edu-info">
+                <span class="edu-timeline">Expected 2029</span>
+                <h3 class="edu-degree">Bachelor's degree – Information Technology</h3>
+                <h4 class="edu-institution">New Cairo Technological University (NCTU)</h4>
+                <span class="edu-location"><i data-lucide="map-pin"></i> Cairo, Egypt</span>
+              </div>
+            </div>
+            <div class="edu-body">
+              <p class="edu-desc">
+                Undergraduate program focused on enterprise information technology systems, advanced networking,
+                distributed computing infrastructure, operating system internals, and modern application security.
+              </p>
+              <div class="edu-tags">
+                <span class="tag">Network Architecture</span>
+                <span class="tag">Information Security</span>
+                <span class="tag">Systems Administration</span>
+                <span class="tag">Database Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Degree 2: High School Diploma with National 3rd Rank -->
+          <div class="glass-card edu-card featured-edu-card">
+            <div class="national-rank-ribbon">
+              <i data-lucide="award"></i> RANKED 3RD NATIONALLY IN EGYPT
+            </div>
+            <div class="edu-header">
+              <div class="edu-badge-icon cyber-amber-bg">
+                <i data-lucide="trophy"></i>
+              </div>
+              <div class="edu-info">
+                <span class="edu-timeline">Graduated Jun 2025</span>
+                <h3 class="edu-degree">High School Diploma – Embedded Systems & AI</h3>
+                <h4 class="edu-institution">Misr International Computer & AI Academy (MICA)</h4>
+                <span class="edu-location"><i data-lucide="map-pin"></i> Giza, Egypt</span>
+              </div>
+            </div>
+            <div class="edu-body">
+              <div class="highlight-callout">
+                <i data-lucide="sparkles" class="callout-icon"></i>
+                <strong>National Achievement:</strong> Ranked <strong>3rd Nationally across the entire Arab Republic of
+                  Egypt</strong> for Embedded Systems & AI engineering excellence.
+              </div>
+              <p class="edu-desc">
+                Rigorous technical curriculum in low-level embedded C programming, microcontrollers (AVR, ESP32),
+                artificial intelligence fundamentals, PCB design, and hardware-software interfacing.
+              </p>
+              <div class="edu-tags">
+                <span class="tag">Embedded C</span>
+                <span class="tag">AI Concepts</span>
+                <span class="tag">Robotics & Sensors</span>
+                <span class="tag">PCB Schematics</span>
+                <span class="tag">3rd Place Egypt</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Work Experience & Internships -->
+    <section class="section-block" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="briefcase"></i> CAREER TIMELINE</div>
+          <h2 class="section-title">Work Experience & Internships</h2>
+          <p class="section-subtitle">Real-world production engineering, security auditing, and automation internships.
+          </p>
+        </div>
+
+        <!-- Experience Category Filters -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-exp-filter="all">All Experience (<span
+              id="count-exp-all">3</span>)</button>
+          <button class="filter-btn" data-exp-filter="work">Work Experience</button>
+          <button class="filter-btn" data-exp-filter="internship">Internships & Traineeships</button>
+        </div>
+
+        <!-- Experience Timeline -->
+        <div class="experience-timeline" id="experience-list">
+
+          <!-- Experience 1: LABstar -->
+          <div class="timeline-item" data-category="work">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="exp-header">
+                <div>
+                  <div class="role-badge work-badge">Work Experience</div>
+                  <h3 class="exp-role">Embedded Software Developer</h3>
+                  <h4 class="exp-company">LABstar &bull; <span class="exp-location"><i data-lucide="map-pin"></i> Cairo,
+                      Egypt</span></h4>
+                </div>
+                <div class="exp-date-pill">
+                  <i data-lucide="calendar"></i> Aug 2023 – Jun 2025
+                </div>
+              </div>
+
+              <div class="exp-body">
+                <ul class="exp-bullets">
+                  <li>
+                    <strong>Role-Based Access Control (RBAC):</strong> Enforced strict RBAC across multi-user industrial
+                    applications, ensuring data integrity and the principle of least-privilege security.
+                  </li>
+                  <li>
+                    <strong>RFID Hardware Authentication:</strong> Executed RFID-based authentication for time-limited
+                    floor access control on elevator systems, overseeing secure hardware-to-board communication and user
+                    authorization.
+                  </li>
+                  <li>
+                    <strong>IoT Cross-Platform Controller:</strong> Created a cross-platform IoT controller (Flutter +
+                    ESP32 via Wi-Fi) with real-time hardware synchronization and low-latency command execution.
+                  </li>
+                  <li>
+                    <strong>Database Security & Audits:</strong> Developed inventory and sales management systems with
+                    SQL database backends and automated audit trails to prevent data tampering.
+                  </li>
+                </ul>
+
+                <div class="exp-tech-chips">
+                  <span class="tech-chip">Embedded C</span>
+                  <span class="tech-chip">RFID Security</span>
+                  <span class="tech-chip">ESP32 Wi-Fi</span>
+                  <span class="tech-chip">Flutter</span>
+                  <span class="tech-chip">RBAC</span>
+                  <span class="tech-chip">SQL Audit Trails</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2: NTI -->
+          <div class="timeline-item" data-category="internship">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="exp-header">
+                <div>
+                  <div class="role-badge security-badge">Cybersecurity Traineeship</div>
+                  <h3 class="exp-role">Penetration Testing & Application Security Trainee</h3>
+                  <h4 class="exp-company">National Telecommunication Institute (NTI) &bull; <span
+                      class="exp-location"><i data-lucide="globe"></i> Online / Cairo</span></h4>
+                </div>
+                <div class="exp-date-pill">
+                  <i data-lucide="calendar"></i> Aug 2026 – Sep 2026
+                </div>
+              </div>
+
+              <div class="exp-body">
+                <ul class="exp-bullets">
+                  <li>
+                    <strong>Offensive & AppSec Training:</strong> Trained in vulnerability assessment, WordPress
+                    hardening, penetration testing methodologies, cloud security auditing, and application security.
+                  </li>
+                  <li>
+                    <strong>Threat Hunting & Log Forensics:</strong> Gained practical exposure to security log analysis,
+                    threat hunting, and security awareness campaign planning.
+                  </li>
+                  <li>
+                    <strong>Real-World Capstone Engagement:</strong> Completed an end-to-end security audit capstone
+                    project and freelance penetration testing engagement.
+                  </li>
+                  <li>
+                    <strong>Professional Freelance Delivery:</strong> Built a professional freelance portfolio and
+                    personal brand for cybersecurity service delivery (Upwork, HackerOne).
+                  </li>
+                </ul>
+
+                <div class="exp-tech-chips">
+                  <span class="tech-chip">Penetration Testing</span>
+                  <span class="tech-chip">Vulnerability Assessment</span>
+                  <span class="tech-chip">WordPress Hardening</span>
+                  <span class="tech-chip">Cloud Security</span>
+                  <span class="tech-chip">Threat Hunting</span>
+                  <span class="tech-chip">AppSec</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 3: CodeAlpha -->
+          <div class="timeline-item" data-category="internship">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="exp-header">
+                <div>
+                  <div class="role-badge intern-badge">Software Intern</div>
+                  <h3 class="exp-role">Python Developer Intern</h3>
+                  <h4 class="exp-company">CodeAlpha &bull; <span class="exp-location"><i data-lucide="globe"></i> Remote
+                      / India</span></h4>
+                </div>
+                <div class="exp-date-pill">
+                  <i data-lucide="calendar"></i> Oct 2025 – Nov 2025
+                </div>
+              </div>
+
+              <div class="exp-body">
+                <ul class="exp-bullets">
+                  <li>
+                    <strong>Security Automation Scripting:</strong> Enhanced Python automation scripts utilizing OS,
+                    Shutil, and Regex modules, strengthening security tooling and workflow automation capabilities.
+                  </li>
+                  <li>
+                    <strong>Advanced Logic & Error Handling:</strong> Expanded logic-driven applications leveraging
+                    advanced data structures, modular design, and robust error-handling best practices.
+                  </li>
+                </ul>
+
+                <div class="exp-tech-chips">
+                  <span class="tech-chip">Python 3</span>
+                  <span class="tech-chip">Regex</span>
+                  <span class="tech-chip">Workflow Automation</span>
+                  <span class="tech-chip">OS & Shutil</span>
+                  <span class="tech-chip">Security Scripting</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Featured Projects Showcase -->
+    <section class="section-block" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="terminal"></i> TECHNICAL PORTFOLIO</div>
+          <h2 class="section-title">Projects & Security Artifacts</h2>
+          <p class="section-subtitle">Click any project to inspect its full brief, architecture, security analysis,
+            photos, and GitHub repo.</p>
+        </div>
+
+        <!-- Project Affiliation Filter Bar -->
+        <div class="filter-bar project-filter-bar">
+          <button class="filter-btn active" data-affiliation-filter="all">All Projects (<span
+              id="count-all">12</span>)</button>
+          <button class="filter-btn" data-affiliation-filter="Company"><i data-lucide="building-2"></i> Company (<span
+              id="count-company">3</span>)</button>
+          <button class="filter-btn" data-affiliation-filter="Education"><i data-lucide="graduation-cap"></i>
+            Education (<span id="count-university">3</span>)</button>
+          <button class="filter-btn" data-affiliation-filter="Self-Employed"><i data-lucide="user-check"></i>
+            Self-Employed (<span id="count-self">6</span>)</button>
+        </div>
+
+        <!-- Projects Grid (Rendered Dynamically from projects-data.js) -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: CTF Competitions & Cyber Operations -->
+    <section class="section-block" id="ctfs">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="flag"></i> CAPTURE THE FLAG</div>
+          <h2 class="section-title">CTF Competitions & Rankings</h2>
+          <p class="section-subtitle">Competitive offensive security, live machine exploitation, reverse engineering,
+            and verified rankings.</p>
+        </div>
+
+        <div class="ctf-grid">
+
+          <!-- CTF 1: Pwn3rx0 CTF by IEEE -->
+          <div class="glass-card ctf-card ieee-card">
+            <div class="ctf-topbar">
+              <div class="ctf-rank-badge rank-amber">
+                <i data-lucide="trophy"></i>
+                <span>#4 RANK SOLO</span>
+              </div>
+              <span class="ctf-date">IEEE &bull; HITU</span>
+            </div>
+
+            <div class="ctf-content">
+              <h3 class="ctf-title">Pwn3rx0 CTF</h3>
+              <h4 class="ctf-org">Organized by IEEE Student Branch</h4>
+              <p class="ctf-desc">
+                Competed <strong>solo against teams of 3–5 members</strong> under intense competitive pressure. Solved
+                challenges spanning Web Exploitation, Linux Privilege Escalation, Binary Analysis, Cryptography, and
+                Forensics.
+              </p>
+
+              <div class="ctf-metrics-row">
+                <div class="ctf-metric-item">
+                  <span class="ctf-metric-label">Standing</span>
+                  <span class="ctf-metric-val cyber-amber">#4 Solo Competitor</span>
+                </div>
+                <div class="ctf-metric-item">
+                  <span class="ctf-metric-label">Format</span>
+                  <span class="ctf-metric-val">Jeopardy CTF</span>
+                </div>
+              </div>
+
+              <div class="ctf-tags">
+                <span class="tech-chip">Solo vs Teams</span>
+                <span class="tech-chip">Web Exploitation</span>
+                <span class="tech-chip">Linux PrivEsc</span>
+                <span class="tech-chip">Binary & Crypto</span>
+              </div>
+            </div>
+
+            <div class="ctf-footer">
+              <a href="pdfs/IEEE-CTF.pdf" target="_blank" rel="noopener noreferrer"
+                class="cyber-btn cyber-btn-primary cyber-btn-sm full-width"
+                title="View Official IEEE CTF Certificate PDF">
+                <i data-lucide="award"></i>
+                <span>View Certificate (PDF)</span>
+                <i data-lucide="external-link" class="mini-ext"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- CTF 2: Hawaii Cyber CTF powered by HTB -->
+          <div class="glass-card ctf-card htb-card">
+            <div class="ctf-topbar">
+              <div class="ctf-rank-badge rank-green">
+                <i data-lucide="zap"></i>
+                <span>#9 RANK GLOBAL</span>
+              </div>
+              <span class="ctf-date">Hack The Box (HTB)</span>
+            </div>
+
+            <div class="ctf-content">
+              <h3 class="ctf-title">Hawaii Cyber CTF</h3>
+              <h4 class="ctf-org">Powered by Hack The Box (HTB)</h4>
+              <p class="ctf-desc">
+                Ranked <strong>9th Globally</strong> in an international cybersecurity CTF powered by Hack The Box,
+                solving complex adversarial challenge machines, web vulnerabilities, reverse engineering, and threat
+                intelligence.
+              </p>
+
+              <div class="ctf-metrics-row">
+                <div class="ctf-metric-item">
+                  <span class="ctf-metric-label">Standing</span>
+                  <span class="ctf-metric-val cyber-green">#9 International</span>
+                </div>
+                <div class="ctf-metric-item">
+                  <span class="ctf-metric-label">Platform</span>
+                  <span class="ctf-metric-val">Hack The Box</span>
+                </div>
+              </div>
+
+              <div class="ctf-tags">
+                <span class="tech-chip">Global Rank #9</span>
+                <span class="tech-chip">HTB Infrastructure</span>
+                <span class="tech-chip">Active Directory</span>
+                <span class="tech-chip">Web Security</span>
+              </div>
+            </div>
+
+            <div class="ctf-footer">
+              <a href="pdfs/Hawaii-Cyber-CTF.pdf" target="_blank" rel="noopener noreferrer"
+                class="cyber-btn cyber-btn-secondary cyber-btn-sm full-width"
+                title="View Official Hawaii Cyber CTF Certificate PDF">
+                <i data-lucide="award"></i>
+                <span>View Certificate (PDF)</span>
+                <i data-lucide="external-link" class="mini-ext"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- CTF 3: TryHackMe Global Arena -->
+          <div class="glass-card ctf-card thm-card">
+            <div class="ctf-topbar">
+              <div class="ctf-rank-badge rank-cyan">
+                <i data-lucide="shield-check"></i>
+                <span>TOP 8% WORLDWIDE</span>
+              </div>
+              <span class="ctf-date">TryHackMe</span>
+            </div>
+
+            <div class="ctf-content">
+              <h3 class="ctf-title">TryHackMe Offensive Arena</h3>
+              <h4 class="ctf-org">TryHackMe &bull; 70+ Virtual Attack Labs</h4>
+              <p class="ctf-desc">
+                Maintained a standing in the <strong>Top 8% globally</strong> across 70+ completed red-teaming lab
+                rooms, mastering Nmap network enumeration, Metasploit exploitation, and Linux/Windows privilege
+                escalation vectors.
+              </p>
+
+              <div class="ctf-metrics-row">
+                <div class="ctf-metric-item">
+                  <span class="ctf-metric-label">Standing</span>
+                  <span class="ctf-metric-val cyber-cyan">Top 8% Global</span>
+                </div>
+                <div class="ctf-metric-item">
+                  <span class="ctf-metric-label">Labs Conquered</span>
+                  <span class="ctf-metric-val">70+ Rooms</span>
+                </div>
+              </div>
+
+              <div class="ctf-tags">
+                <span class="tech-chip">Top 8% Global</span>
+                <span class="tech-chip">70+ Rooms</span>
+                <span class="tech-chip">Red Teaming</span>
+                <span class="tech-chip">PrivEsc</span>
+              </div>
+            </div>
+
+            <div class="ctf-footer">
+              <a href="https://tryhackme.com/p/0x4FMR" target="_blank" rel="noopener noreferrer"
+                class="cyber-btn cyber-btn-outline cyber-btn-sm full-width" title="Inspect TryHackMe Platform">
+                <i data-lucide="shield"></i>
+                <span>TryHackMe Profile</span>
+                <i data-lucide="external-link" class="mini-ext"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Technical Skills Matrix -->
+    <section class="section-block" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="cpu"></i> TECHNICAL ARSENAL</div>
+          <h2 class="section-title">Skills & Capabilities Matrix</h2>
+          <p class="section-subtitle">Categorized breakdown of programming languages, security testing frameworks,
+            tools, and platforms.</p>
+        </div>
+
+        <div class="skills-category-grid">
+
+          <!-- Category 1: Languages -->
+          <div class="glass-card skill-group-card">
+            <div class="skill-group-header">
+              <div class="skill-icon-circle cyber-cyan-bg">
+                <i data-lucide="code-2"></i>
+              </div>
+              <h3 class="skill-group-title">Languages & Low-Level</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-pill-item">
+                <span class="skill-name">C Programming</span>
+                <span class="skill-level-badge">Advanced</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Python 3</span>
+                <span class="skill-level-badge">Advanced</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">x86-64 Assembly</span>
+                <span class="skill-level-badge">Low-Level</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Bash Scripting</span>
+                <span class="skill-level-badge">Proficient</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">SQL (MySQL / Oracle)</span>
+                <span class="skill-level-badge">Proficient</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">JavaScript (ES6+)</span>
+                <span class="skill-level-badge">Intermediate</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">PowerShell</span>
+                <span class="skill-level-badge">Intermediate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Security Testing & Methodology -->
+          <div class="glass-card skill-group-card">
+            <div class="skill-group-header">
+              <div class="skill-icon-circle cyber-green-bg">
+                <i data-lucide="shield-check"></i>
+              </div>
+              <h3 class="skill-group-title">Security Testing & Methodology</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-pill-item">
+                <span class="skill-name">OWASP Top 10</span>
+                <span class="skill-level-badge">Core Focus</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Manual Web Pentesting</span>
+                <span class="skill-level-badge">Core Focus</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Reconnaissance & Enumeration</span>
+                <span class="skill-level-badge">Advanced</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Exploitation Techniques</span>
+                <span class="skill-level-badge">Advanced</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Vulnerability Assessment</span>
+                <span class="skill-level-badge">Advanced</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Networking Fundamentals</span>
+                <span class="skill-level-badge">TCP/IP, OSI</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Privilege Escalation</span>
+                <span class="skill-level-badge">Linux & Win</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Security & Analysis Tools -->
+          <div class="glass-card skill-group-card">
+            <div class="skill-group-header">
+              <div class="skill-icon-circle cyber-amber-bg">
+                <i data-lucide="wrench"></i>
+              </div>
+              <h3 class="skill-group-title">Security Tools & Auditing</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-pill-item">
+                <span class="skill-name">Metasploit Framework</span>
+                <span class="skill-level-badge">Exploit</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">OpenVAS / Greenbone</span>
+                <span class="skill-level-badge">CVE Scan</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Burp Suite</span>
+                <span class="skill-level-badge">HTTP Proxy</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Nmap</span>
+                <span class="skill-level-badge">Port Mapper</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Wireshark</span>
+                <span class="skill-level-badge">Packets</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Gobuster / Dirb</span>
+                <span class="skill-level-badge">Fuzzing</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">SQLmap & Nessus</span>
+                <span class="skill-level-badge">Auditing</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">IDA Pro</span>
+                <span class="skill-level-badge">Disassembly</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: OS, Hardware, IoT & Frameworks -->
+          <div class="glass-card skill-group-card">
+            <div class="skill-group-header">
+              <div class="skill-icon-circle cyber-purple-bg">
+                <i data-lucide="layers"></i>
+              </div>
+              <h3 class="skill-group-title">Hardware, IoT & Cloud</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-pill-item">
+                <span class="skill-name">Linux (Kali, Ubuntu)</span>
+                <span class="skill-level-badge">Daily Driver</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Windows & Win32 API</span>
+                <span class="skill-level-badge">Advanced</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">ESP32 / ESP8266</span>
+                <span class="skill-level-badge">IoT Hardware</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Custom PCB Design</span>
+                <span class="skill-level-badge">Hardware</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Flutter / Dart</span>
+                <span class="skill-level-badge">Mobile UI</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Firebase Realtime DB</span>
+                <span class="skill-level-badge">Cloud</span>
+              </div>
+              <div class="skill-pill-item">
+                <span class="skill-name">Git & GitHub</span>
+                <span class="skill-level-badge">CI / Version</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Leadership & Extracurriculars -->
+    <section class="section-block" id="leadership">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="users"></i> LEADERSHIP & INITIATIVE</div>
+          <h2 class="section-title">Leadership & Coordination</h2>
+          <p class="section-subtitle">Directing cross-functional engineering teams, mentoring, and technical competition
+            management.</p>
+        </div>
+
+        <div class="leadership-grid">
+          <!-- Leadership 1: Graduation Project Lead -->
+          <div class="glass-card leadership-card">
+            <div class="lead-header">
+              <div class="lead-icon-box cyber-cyan-bg">
+                <i data-lucide="compass"></i>
+              </div>
+              <div>
+                <span class="lead-year">2025 &bull; MICA</span>
+                <h3 class="lead-role">Technical Project Lead – Graduation Project</h3>
+                <h4 class="lead-org">Voice-Controlled Smart Home with Custom PCB</h4>
+              </div>
+            </div>
+            <div class="lead-body">
+              <ul class="lead-bullets">
+                <li>
+                  <i data-lucide="check-circle" class="bullet-icon"></i>
+                  <span>Directed a multidisciplinary engineering team to architect and build a Voice-Controlled Smart
+                    Home ecosystem integrating Flutter, Firebase, and ESP8266 microcontrollers.</span>
+                </li>
+                <li>
+                  <i data-lucide="check-circle" class="bullet-icon"></i>
+                  <span>Managed sprint milestones, task distribution, hardware-to-cloud integration, and technical
+                    engineering documentation.</span>
+                </li>
+                <li>
+                  <i data-lucide="check-circle" class="bullet-icon"></i>
+                  <span>Spearheaded custom PCB schematic layout, optocoupler relay isolation, and safety
+                    certifications.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Leadership 2: RoboCup Technical Coordinator -->
+          <div class="glass-card leadership-card">
+            <div class="lead-header">
+              <div class="lead-icon-box cyber-green-bg">
+                <i data-lucide="cpu"></i>
+              </div>
+              <div>
+                <span class="lead-year">2025 &bull; MICA</span>
+                <h3 class="lead-role">Technical Coordinator, RoboCup</h3>
+                <h4 class="lead-org">Line Follower Robotics Division</h4>
+              </div>
+            </div>
+            <div class="lead-body">
+              <ul class="lead-bullets">
+                <li>
+                  <i data-lucide="check-circle" class="bullet-icon"></i>
+                  <span>Led the Line Follower robotics category, overseeing technical pre-flight inspections and rule
+                    compliance for competing teams.</span>
+                </li>
+                <li>
+                  <i data-lucide="check-circle" class="bullet-icon"></i>
+                  <span>Mentored competing students on IR sensor array calibration, PID control algorithms, and embedded
+                    logic optimization.</span>
+                </li>
+                <li>
+                  <i data-lucide="check-circle" class="bullet-icon"></i>
+                  <span>Resolved live technical hardware disputes and validated timing gate accuracy under competition
+                    conditions.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Certificates & Verified Credentials -->
+    <section class="section-block" id="certificates">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="award"></i> VERIFIED CREDENTIALS</div>
+          <h2 class="section-title">Certifications & Honors</h2>
+          <p class="section-subtitle">Formal professional certifications from IBM, Oracle, University of Michigan,
+            Google, and Microsoft.</p>
+        </div>
+
+        <!-- Dynamic Certificates Grid (Rendered from certificates-data.js) -->
+        <div class="certificates-grid" id="certificates-grid">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Section: Contact & Direct Connect -->
+    <section class="section-block" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="send"></i> CONNECT WITH ME</div>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Interested in offensive security engagements, pentest roles, or technical
+            collaborations? Reach out directly.</p>
+        </div>
+
+        <div class="contact-grid-wrapper">
+          <div class="contact-layout-grid">
+
+            <!-- Row 1 Left: Email -->
+            <div class="glass-card contact-card">
+              <div class="contact-card-icon cyber-cyan-bg">
+                <i data-lucide="mail"></i>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Email Address</span>
+                <a href="mailto:omarforsec@gmail.com" class="contact-card-val"
+                  title="Send Email">omarforsec@gmail.com</a>
+              </div>
+              <button class="copy-icon-btn" data-copy="omarforsec@gmail.com" title="Copy Email">
+                <i data-lucide="copy"></i>
+              </button>
+            </div>
+
+            <!-- Row 1 Right: Location -->
+            <div class="glass-card contact-card">
+              <div class="contact-card-icon cyber-amber-bg">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Location</span>
+                <span class="contact-card-val">Giza, Egypt (Remote / On-Site)</span>
+              </div>
+            </div>
+
+            <!-- Row 2 Left: Primary Phone (num1) -->
+            <div class="glass-card contact-card">
+              <div class="contact-card-icon cyber-green-bg">
+                <i data-lucide="phone"></i>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Primary Phone / WhatsApp</span>
+                <a href="tel:01061408612" class="contact-card-val" title="Call Primary Phone">01061408612</a>
+              </div>
+              <button class="copy-icon-btn" data-copy="01061408612" title="Copy Phone">
+                <i data-lucide="copy"></i>
+              </button>
+            </div>
+
+            <!-- Row 2 Right: Secondary Phone (num2) -->
+            <div class="glass-card contact-card">
+              <div class="contact-card-icon cyber-purple-bg">
+                <i data-lucide="phone-call"></i>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Secondary Phone</span>
+                <a href="tel:01144130977" class="contact-card-val" title="Call Secondary Phone">01144130977</a>
+              </div>
+              <button class="copy-icon-btn" data-copy="01144130977" title="Copy Secondary Phone">
+                <i data-lucide="copy"></i>
+              </button>
+            </div>
+
+            <!-- Row 3 Left: GitHub -->
+            <a href="https://github.com/0xOmar-Ibrahim" target="_blank" rel="noopener noreferrer"
+              class="glass-card contact-card" title="Open GitHub Profile">
+              <div class="contact-card-icon github-brand-bg">
+                <svg class="brand-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">GitHub Profile</span>
+                <span class="contact-card-val">0xOmar-Ibrahim</span>
+              </div>
+              <div class="ext-icon-badge">
+                <i data-lucide="external-link"></i>
+              </div>
+            </a>
+
+            <!-- Row 3 Right: LinkedIn -->
+            <a href="https://www.linkedin.com/in/0x4fmar" target="_blank" rel="noopener noreferrer"
+              class="glass-card contact-card" title="Open LinkedIn Profile">
+              <div class="contact-card-icon linkedin-brand-bg">
+                <svg class="brand-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">LinkedIn Profile</span>
+                <span class="contact-card-val">omar-ibrahem</span>
+              </div>
+              <div class="ext-icon-badge">
+                <i data-lucide="external-link"></i>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="cyber-footer">
+    <div class="container footer-container">
+      <div class="footer-brand-column">
+        <a href="#hero" class="nav-brand">
+          <span class="brand-prefix">0x</span><span class="brand-name">Omar</span>
+        </a>
+        <p class="footer-tagline">Penetration Tester & Ethical Hacker &bull; Building resilient architectures and
+          offensive security pipelines.</p>
+      </div>
+
+      <div class="footer-links-column">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#ctfs">CTFs</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-actions-column">
+        <h4 class="footer-heading">Security Node</h4>
+
+        <button class="cyber-btn cyber-btn-sm cyber-btn-terminal" id="footer-terminal-btn">
+          <i data-lucide="terminal"></i>
+          <span>Launch 0xTerminal</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; <span id="current-year">2026</span> Omar Ibrahim. All rights reserved.</p>
+        <a href="#hero" class="back-to-top-btn" id="btn-back-to-top" title="Back to top">
+          <span>BACK TO TOP</span>
+          <i data-lucide="arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- MODAL 1: Dedicated Interactive Project Detail Modal -->
+  <!-- ======================================================== -->
+  <div class="cyber-modal-overlay" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card glass-card" id="project-modal-card">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-header-info">
+          <span class="modal-category-badge" id="modal-category-badge">Category</span>
+          <h3 class="modal-project-title" id="modal-title">Project Title</h3>
+          <h4 class="modal-project-subtitle" id="modal-subtitle">Project Subtitle</h4>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Project Modal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body" id="modal-body-content">
+
+        <!-- Hero Project Image -->
+        <div class="modal-image-container">
+          <img src="" alt="Project Photo" id="modal-hero-img" class="modal-hero-img">
+          <div class="modal-image-overlay">
+            <span class="modal-role-pill" id="modal-role-pill"><i data-lucide="user"></i> Developer</span>
+            <span class="modal-date-pill" id="modal-date-pill"><i data-lucide="calendar"></i> Date</span>
+          </div>
+        </div>
+
+        <!-- Modal Navigation Tabs -->
+        <div class="modal-tabs">
+          <button class="modal-tab active" data-tab="brief"><i data-lucide="file-text"></i> Overview & Brief</button>
+          <button class="modal-tab" data-tab="architecture"><i data-lucide="git-branch"></i> Architecture &
+            Security</button>
+          <button class="modal-tab" data-tab="highlights"><i data-lucide="zap"></i> Key Highlights</button>
+          <button class="modal-tab" data-tab="media"><i data-lucide="image"></i> Photos & Media</button>
+        </div>
+
+        <!-- Tab 1: Brief & Overview -->
+        <div class="modal-tab-pane active" id="tab-brief">
+          <div class="modal-section-title"><i data-lucide="align-left"></i> Executive Brief & Problem Statement</div>
+          <div class="modal-text-block" id="modal-full-desc"></div>
+
+          <div class="modal-section-title"><i data-lucide="tag"></i> Tech Stack & Security Tooling</div>
+          <div class="modal-tags-row" id="modal-tags-row"></div>
+        </div>
+
+        <!-- Tab 2: Architecture & Security Methodology -->
+        <div class="modal-tab-pane" id="tab-architecture">
+          <div class="modal-section-title"><i data-lucide="shield"></i> Security Architecture & Methodology</div>
+          <div class="arch-grid" id="modal-arch-grid"></div>
+        </div>
+
+        <!-- Tab 3: Highlights -->
+        <div class="modal-tab-pane" id="tab-highlights">
+          <div class="modal-section-title"><i data-lucide="check-circle-2"></i> Core Accomplishments & Milestones</div>
+          <ul class="modal-highlights-list" id="modal-highlights-list"></ul>
+        </div>
+
+        <!-- Tab 4: Photos & Media -->
+        <div class="modal-tab-pane" id="tab-media">
+          <div class="modal-section-title"><i data-lucide="image"></i> Project Photos & Artifacts</div>
+          <div class="modal-gallery-grid" id="modal-gallery-grid"></div>
+          <div id="modal-video-box" class="modal-video-box" style="display:none; margin-top:1.5rem;"></div>
+        </div>
+
+        <!-- Tab 5: Interactive Live Demo Sandbox -->
+        <div class="modal-tab-pane" id="tab-demo">
+          <div class="modal-section-title"><i data-lucide="terminal"></i> In-Browser Interactive Project Simulation
+          </div>
+          <div class="interactive-demo-container" id="modal-demo-container"></div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer with GitHub, Video, and Actions -->
+      <div class="modal-footer">
+        <a href="https://github.com/0xOmar-Ibrahim" target="_blank" rel="noopener noreferrer"
+          class="cyber-btn cyber-btn-primary modal-github-action-btn" id="modal-github-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"
+            style="margin-right: 2px;">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          <span>View Source Code on GitHub</span>
+          <i data-lucide="external-link" class="mini-ext"></i>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="cyber-btn cyber-btn-secondary"
+          id="modal-video-link" style="display:none;">
+          <i data-lucide="play-circle"></i>
+          <span>Watch Demo Video</span>
+          <i data-lucide="external-link" class="mini-ext"></i>
+        </a>
+        <button class="cyber-btn cyber-btn-outline" id="modal-close-btn-bottom">
+          <span>Close Window</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL 2: Interactive Cyber Terminal (0xTerminal) -->
+  <!-- ======================================================== -->
+  <div class="cyber-modal-overlay" id="terminal-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="terminal-window glass-card" id="terminal-window-box">
+      <!-- Title Bar -->
+      <div class="terminal-titlebar">
+        <div class="titlebar-controls">
+          <span class="control-btn close" id="term-close-dot" title="Close Terminal"></span>
+          <span class="control-btn minimize" id="term-min-dot"></span>
+          <span class="control-btn maximize" id="term-max-dot"></span>
+        </div>
+        <div class="titlebar-text">
+          <i data-lucide="terminal"></i> 0xConsole v2.4 — omar@sec-station:~ (Interactive CLI)
+        </div>
+        <div class="titlebar-shortcuts">
+          <span>[ESC] to Close</span>
+        </div>
+      </div>
+
+      <!-- Terminal Output Screen -->
+      <div class="terminal-screen-wrapper" id="term-scroll-container">
+        <div class="terminal-output" id="terminal-output-lines">
+          <!-- Terminal Greeting & Banner -->
+          <div class="term-banner">
+            <pre class="ascii-art">
+   ___  _  __ _____                      ____ __               __  _            
+  / _ \| |/ // ___/__  __ _  ___ _____   /  _// /  _______ _   / / (_)__ _  ___ 
+ / // /   </ / (_ // _ \/  ' \/ _ `/ __/  _/ / / _ \/ __/ _ `/  / _ \/ / _ `/ / _ \
+ \___//_/|_| \___/\___/_/_/_/\_,_/_/    /___//_.__/_/  \_,_/  /_.__/_/\_,_/_/_//_/
+</pre>
+            <p class="term-welcome-msg">
+              Welcome to <strong>Omar Ibrahim's Offensive Security Console</strong> [Version 2.4.0-release]<br>
+              Type <strong class="cyber-green">'help'</strong> to see available commands or click a quick action below.
+            </p>
+            <div class="term-quick-chips">
+              <button class="term-chip" data-cmd="help">help</button>
+              <button class="term-chip" data-cmd="skills">skills</button>
+              <button class="term-chip" data-cmd="projects">projects</button>
+              <button class="term-chip" data-cmd="whoami">whoami</button>
+              <button class="term-chip" data-cmd="nmap target">nmap</button>
+              <button class="term-chip" data-cmd="certs">certs</button>
+              <button class="term-chip" data-cmd="contact">contact</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Input Prompt -->
+        <div class="terminal-input-row">
+          <span class="term-user-prompt">omar@sec-station:~$</span>
+          <input type="text" id="terminal-input" class="terminal-cli-input" autocomplete="off" autocorrect="off"
+            autocapitalize="off" spellcheck="false" autofocus>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="projects-data.js?v=2.2"></script>
+  <script src="certificates-data.js?v=2.2"></script>
+  <script src="app.js?v=2.2"></script>
+</body>
+
+</html>
