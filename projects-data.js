@@ -200,6 +200,7 @@ var PROJECTS_DATA = [
     affiliationName: "MICA",
     featured: true,
     badge: "FinTech Security",
+<<<<<<< HEAD
     image: "assets/projs-imgs/Bank-1.png",
     photos: [
       "assets/projs-imgs/Bank-1.png",
@@ -213,6 +214,21 @@ var PROJECTS_DATA = [
       "assets/projs-imgs/Bank-9.png",
       "assets/projs-imgs/Bank-10.png",
       "assets/projs-imgs/Bank-11.png",
+=======
+    image: "./assets/projs-imgs/Bank-1.png",
+    photos: [
+      "./assets/projs-imgs/Bank-1.png",
+      "./assets/projs-imgs/Bank-2.png",
+      "./assets/projs-imgs/Bank-3.png",
+      "./assets/projs-imgs/Bank-4.png",
+      "./assets/projs-imgs/Bank-5.png",
+      "./assets/projs-imgs/Bank-6.png",
+      "./assets/projs-imgs/Bank-7.png",
+      "./assets/projs-imgs/Bank-8.png",
+      "./assets/projs-imgs/Bank-9.png",
+      "./assets/projs-imgs/Bank-10.png",
+      "./assets/projs-imgs/Bank-11.png",
+>>>>>>> e2a44ee94f9edd0793b1c3189e8ab6aedb2899a4
     ],
     videoUrl: "https://drive.google.com/file/d/15RhqgTHMY3Aq9-Z-kI0AA7WC4AWtFOKm/view?usp=sharing",
     github: "https://github.com/0xOmar-Ibrahim/Bank-Managament-System",
