@@ -1218,26 +1218,39 @@ a:hover {
 }
 
 .featured-edu-card {
-  border-color: rgba(255, 184, 0, 0.4);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 184, 0, 0.1);
+  border-color: rgba(255, 184, 0, 0.45);
+  background: linear-gradient(135deg, rgba(14, 24, 44, 0.85) 0%, rgba(28, 20, 8, 0.6) 100%);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 184, 0, 0.12);
+}
+
+.featured-edu-card:hover {
+  border-color: rgba(255, 184, 0, 0.75);
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 184, 0, 0.25);
 }
 
 .national-rank-ribbon {
   position: absolute;
   top: 16px;
   right: 16px;
-  background: linear-gradient(135deg, #ffb800, #ff8800);
-  color: #000;
+  background: linear-gradient(135deg, #ffb800 0%, #ff8800 100%);
+  color: #050811;
   font-family: var(--font-mono);
-  font-size: clamp(0.62rem, 1.8vw, 0.7rem);
+  font-size: clamp(0.64rem, 1.8vw, 0.72rem);
   font-weight: 800;
-  padding: 0.3rem 0.75rem;
+  padding: 0.35rem 0.8rem;
   border-radius: 999px;
   display: flex;
   align-items: center;
-  gap: 0.35rem;
-  box-shadow: 0 0 15px rgba(255, 184, 0, 0.5);
+  gap: 0.4rem;
+  box-shadow: 0 0 16px rgba(255, 184, 0, 0.45);
+  letter-spacing: 0.5px;
   z-index: 2;
+}
+
+.national-rank-ribbon i {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.5;
 }
 
 .edu-header {
@@ -1285,22 +1298,84 @@ a:hover {
   margin-top: 0.2rem;
 }
 
-.highlight-callout {
-  background: rgba(255, 184, 0, 0.08);
+/* ==========================================================================
+   National Achievement Callout Plaque
+   ========================================================================== */
+.national-achievement-box {
+  background: linear-gradient(135deg, rgba(255, 184, 0, 0.1) 0%, rgba(255, 136, 0, 0.03) 100%);
+  border: 1px solid rgba(255, 184, 0, 0.35);
   border-left: 3px solid var(--amber-alert);
-  padding: 0.75rem 1rem;
-  border-radius: 0 6px 6px 0;
-  margin-bottom: 1rem;
-  font-size: 0.88rem;
-  color: var(--text-primary);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  border-radius: 8px;
+  padding: clamp(0.85rem, 2.5vw, 1.15rem);
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 18px rgba(255, 184, 0, 0.08);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.callout-icon {
+.national-achievement-box:hover {
+  border-color: rgba(255, 184, 0, 0.6);
+  box-shadow: 0 4px 22px rgba(255, 184, 0, 0.16);
+}
+
+.achievement-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.achievement-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.achievement-spark-icon {
+  width: 15px;
+  height: 15px;
   color: var(--amber-alert);
   flex-shrink: 0;
+}
+
+.achievement-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--amber-alert);
+  letter-spacing: 0.6px;
+}
+
+.achievement-rank-pill {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  background: rgba(255, 184, 0, 0.2);
+  border: 1px solid rgba(255, 184, 0, 0.45);
+  color: #ffca28;
+  padding: 0.18rem 0.55rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.achievement-rank-pill i {
+  width: 12px;
+  height: 12px;
+}
+
+.achievement-desc {
+  font-size: clamp(0.84rem, 2.2vw, 0.9rem);
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.achievement-desc strong {
+  color: #ffca28;
+  font-weight: 700;
 }
 
 .edu-desc {
@@ -1313,6 +1388,13 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
+}
+
+.tag-highlight {
+  background: rgba(255, 184, 0, 0.14) !important;
+  border-color: rgba(255, 184, 0, 0.45) !important;
+  color: #ffca28 !important;
+  font-weight: 700 !important;
 }
 
 .tag {
