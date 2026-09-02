@@ -42,6 +42,18 @@ document.addEventListener('DOMContentLoaded', () => {
       mouseY = e.clientY;
     });
 
+    window.addEventListener('touchmove', (e) => {
+      if (e.touches && e.touches[0]) {
+        mouseX = e.touches[0].clientX;
+        mouseY = e.touches[0].clientY;
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      mouseX = -1000;
+      mouseY = -1000;
+    }, { passive: true });
+
     function animateParticles() {
       ctx.clearRect(0, 0, width, height);
 
@@ -171,20 +183,70 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Mobile Navigation Drawer Toggle
+  // Mobile Navigation Drawer Toggle & Touch Controller
   const mobileToggle = document.getElementById('mobile-toggle');
   const navMenu = document.getElementById('nav-menu');
+
+  function updateMobileToggleIcon(isOpen) {
+    if (!mobileToggle) return;
+    mobileToggle.innerHTML = isOpen
+      ? '<i data-lucide="x" id="menu-icon"></i>'
+      : '<i data-lucide="menu" id="menu-icon"></i>';
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  }
+
+  function closeMobileMenu() {
+    if (!navMenu || !navMenu.classList.contains('active')) return;
+    navMenu.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+    if (mobileToggle) {
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      updateMobileToggleIcon(false);
+    }
+  }
+
+  function openMobileMenu() {
+    if (!navMenu) return;
+    navMenu.classList.add('active');
+    document.body.classList.add('no-scroll');
+    if (mobileToggle) {
+      mobileToggle.setAttribute('aria-expanded', 'true');
+      updateMobileToggleIcon(true);
+    }
+  }
+
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-      const isActive = navMenu.classList.toggle('active');
-      mobileToggle.setAttribute('aria-expanded', isActive);
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isActive = navMenu.classList.contains('active');
+      if (isActive) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
     });
 
+    // Close on nav item click
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        mobileToggle.setAttribute('aria-expanded', 'false');
+        closeMobileMenu();
       });
+    });
+
+    // Close when tapping outside the mobile menu
+    document.addEventListener('click', (e) => {
+      if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close on window resize if scaling to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+        closeMobileMenu();
+      }
     });
   }
 
@@ -491,7 +553,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Show modal
     projectModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('no-scroll');
+
+    // Scroll modal body to top
+    const modalBody = document.getElementById('modal-body-content');
+    if (modalBody) modalBody.scrollTop = 0;
 
     if (window.lucide) {
       lucide.createIcons();
@@ -501,7 +567,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeProjectModal() {
     if (projectModal) {
       projectModal.classList.remove('active');
-      document.body.style.overflow = '';
+      document.body.classList.remove('no-scroll');
     }
   }
 
@@ -881,7 +947,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
   function openTerminal() {
     if (!terminalModal) return;
     terminalModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('no-scroll');
     setTimeout(() => {
       if (termInput) termInput.focus();
     }, 100);
@@ -890,7 +956,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
   function closeTerminal() {
     if (!terminalModal) return;
     terminalModal.classList.remove('active');
-    document.body.style.overflow = '';
+    document.body.classList.remove('no-scroll');
   }
 
   openTerminalBtns.forEach((btn) => {
